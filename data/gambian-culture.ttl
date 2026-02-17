@@ -1,0 +1,16 @@
+@prefix ex: <http://example.org/gambia#> .
+@prefix owl: <http://www.w3.org/2002/07/0wl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+### Classes
+ex:CulturalGroup a owl:Class .
+ex:Festival a owl:Class .
+ex:Religion a owl: Class .
+ex:Food a owl:class .
+ex:Region a owl:Class .
+ex:Tradition a owl:Class .
+
+###Examples
+ex:Mandinka a ex:CulturalGroup .
+ex:Domada a ex:Food .
+ex:Banjul a ex:Region .
