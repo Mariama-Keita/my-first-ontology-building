@@ -1,16 +1,31 @@
 @prefix ex: <http://example.org/gambia#> .
 @prefix owl: <http://www.w3.org/2002/07/0wl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 ### Classes
-ex:CulturalGroup a owl:Class .
+ex:EthnicGroup a owl:Class .
 ex:Festival a owl:Class .
 ex:Religion a owl:Class .
 ex:Food a owl:class .
 ex:Region a owl:Class .
 ex:Tradition a owl:Class .
+ex:Music a owl:Class .
+
+### Object Properties
+ex:hasFood a owl:ObjectProperty .
+ex:occupantsOf a owl:ObjectProperty .
+ex:PracticeBy a owl:ObjectProperty .
+ex:locatedIn a owl:ObjectProperty .
+ex:knownBy a owl:ObjectProperty .
+ex:belongTo a owl:ObjectProperty .
+ex:isMostlyEatenBy a owl:ObjectProperty .
 
 ###Examples
-ex:Mandinka a ex:CulturalGroup .
+ex:Mandinkas a ex:EthnicGroup .
+ex:Islam a ex:Religion .
 ex:Domada a ex:Food .
 ex:Banjul a ex:Region .
+ex:Foni a ex:Region .
+ex:Domada ex:isMostlyEatenBy ex:Mandinkas .
+ex:Mandinkas ex:locatedIn ex:Foni .
