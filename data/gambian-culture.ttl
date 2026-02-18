@@ -21,6 +21,16 @@ ex:knownBy a owl:ObjectProperty .
 ex:belongsTo a owl:ObjectProperty .
 ex:isMostlyEatenBy a owl:ObjectProperty .
 
+##property semantics
+
+ex:hasFood rdfs:domain ex:EthnicGroup;
+           rdfs:range ex:Food .
+           
+ex:locatedIn rdfs:domain ex:EthinicGroup;
+            rdfs:range ex:Region .
+            
+ex:isMostlyEatenBy rdfs: ex:Food;
+                   rdfs:range ex:EthnicGroup .
 ###Examples
 ex:Mandinkas a ex:EthnicGroup .
 ex:Islam a ex:Religion .
