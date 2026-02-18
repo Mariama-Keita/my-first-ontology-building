@@ -26,10 +26,10 @@ ex:isMostlyEatenBy a owl:ObjectProperty .
 ex:hasFood rdfs:domain ex:EthnicGroup;
            rdfs:range ex:Food .
            
-ex:locatedIn rdfs:domain ex:EthinicGroup;
+ex:locatedIn rdfs:domain ex:EthnicGroup;
             rdfs:range ex:Region .
             
-ex:isMostlyEatenBy rdfs: ex:Food;
+ex:isMostlyEatenBy rdfs:Domain ex:Food;
                    rdfs:range ex:EthnicGroup .
 ###Examples
 ex:Mandinkas a ex:EthnicGroup .
