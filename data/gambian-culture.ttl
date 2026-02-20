@@ -1,4 +1,3 @@
-@prefix ex: <http://example.org/gambia#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -29,9 +28,9 @@ ex:hasFood rdfs:domain ex:EthnicGroup;
 ex:locatedIn rdfs:domain ex:EthnicGroup;
             rdfs:range ex:Region .
             
-ex:isMostlyEatenBy rdfs:Domain ex:Food;
+ex:isMostlyEatenBy rdfs:domain ex:Food;
                    rdfs:range ex:EthnicGroup .
-###Examples
+###Examples of ethinics
 ex:Mandinkas a ex:EthnicGroup .
 ex:Wollofs a ex:EthnicGroup .
 ex:Fulas a ex:EthnicGroup .
@@ -39,29 +38,40 @@ ex:Jolas a ex:EthnicGroup .
 ex:Akus  a ex:EthnicGroup.
 ex:Sereres a ex:EthnicGroup .
 ex:Manjagoes a ex:EthnicGroup .
+#examples of Religions
+
+ex:Christianity a ex:Religion .
 ex:Islam a ex:Religion .
+
+#examples of foods
+
 ex:Domada a ex:Food .
-ex:Banjul a ex:Region .
-ex:Foni a ex:Region .
 ex:Yassa a ex:Food .
 ex:CestBon a ex:Food.
 ex:SuperKanja a ex:Food .
 ex:Stew a ex:Food .
 ex:Benechin a ex:Food .
-ex:Chakery a ex:Food .
 ex:Nanburru a ex:Food .
 ex:Afra a ex:Food .
 ex:Chakery a ex:Food .
 ex:Futi a ex:Food .
 
-#eg for relatinoships
+#examples of places
+ex:Banjul a ex:Region .
+ex:Foni a ex:Region .
+
+#examples of relatinoships
 ex:Mandinkas ex:hasFood ex:Domada .
 ex:Wollofs ex:hasFood ex:Benechin .
 ex:Fulas ex:hasFood ex:Futi.
-ex:Yassa ex:hasFood ex:Mandinkas,
+ex:Yassa ex:isMostlyEatenBy ex:Mandinkas,
                     ex:Sereres,
                     ex:Fulas,
                     ex:Jolas,
                     ex:Akus,
                     ex:Manjagoes.
+                    
+                    
+#examples of ingredient class
 
+ex:Ingredient a owl:Class .
