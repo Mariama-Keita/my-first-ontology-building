@@ -32,13 +32,13 @@ ex:locatedIn rdfs:domain ex:EthnicGroup;
 ex:isMostlyEatenBy rdfs:Domain ex:Food;
                    rdfs:range ex:EthnicGroup .
 ###Examples
-ex:Mandinka a ex:EthnicGroup .
-ex:Wollof a ex:EthnicGroup .
-ex:Fula a ex:EthnicGroup .
-ex:Jola a ex:EthnicGroup .
-ex:Aku a ex:EthnicGroup.
-ex:Serere a ex:EthnicGroup .
-ex:Manjago a ex:EthnicGroup .
+ex:Mandinkas a ex:EthnicGroup .
+ex:Wollofs a ex:EthnicGroup .
+ex:Fulas a ex:EthnicGroup .
+ex:Jolas a ex:EthnicGroup .
+ex:Akus  a ex:EthnicGroup.
+ex:Sereres a ex:EthnicGroup .
+ex:Manjagoes a ex:EthnicGroup .
 ex:Islam a ex:Religion .
 ex:Domada a ex:Food .
 ex:Banjul a ex:Region .
@@ -54,4 +54,14 @@ ex:Afra a ex:Food .
 ex:Chakery a ex:Food .
 ex:Futi a ex:Food .
 
+#eg for relatinoships
+ex:Mandinkas ex:hasFood ex:Domada .
+ex:Wollofs ex:hasFood ex:Benechin .
+ex:Fulas ex:hasFood ex:Futi.
+ex:Yassa ex:hasFood ex:Mandinkas,
+                    ex:Sereres,
+                    ex:Fulas,
+                    ex:Jolas,
+                    ex:Akus,
+                    ex:Manjagoes.
 
