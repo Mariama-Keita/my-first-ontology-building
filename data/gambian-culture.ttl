@@ -19,6 +19,9 @@ ex:locatedIn a owl:ObjectProperty .
 ex:knownBy a owl:ObjectProperty .
 ex:belongsTo a owl:ObjectProperty .
 ex:isMostlyEatenBy a owl:ObjectProperty .
+ex:hasIngredient a owl:ObjectProperty.
+ex:forbidsIngredient a owl:ObjectProperty .
+ex:practiceReligion a owl:ObjectProperty.
 
 ##property semantics
 
@@ -30,6 +33,14 @@ ex:locatedIn rdfs:domain ex:EthnicGroup;
             
 ex:isMostlyEatenBy rdfs:domain ex:Food;
                    rdfs:range ex:EthnicGroup .
+ex:hasIngredient rdfs:domain ex:Food;
+                 rdfs:range ex:Ingredient.
+ex:forbidsIngredient rdfs:domain ex:Religion;
+                     rdfs:range ex:Ingredient.
+ex:practicesReligion rdfs:domain ex:EthnicGroup;
+                     rdfs:range ex:Religion .
+                     
+                     
 ###Examples of ethinics
 ex:Mandinkas a ex:EthnicGroup .
 ex:Wollofs a ex:EthnicGroup .
@@ -75,3 +86,8 @@ ex:Yassa ex:isMostlyEatenBy ex:Mandinkas,
 #examples of ingredient class
 
 ex:Ingredient a owl:Class .
+ex:Pork a ex:Ingredient .
+ex:Beef a ex:Ingredient.
+ex:Vegetables a ex:Ingredient.
+ex:Chicken a ex:Ingredient .
+
