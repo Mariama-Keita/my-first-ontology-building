@@ -1,6 +1,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/gambia#> .
 
 ### Classes
 ex:EthnicGroup a owl:Class .
@@ -41,7 +42,7 @@ ex:practicesReligion rdfs:domain ex:EthnicGroup;
                      rdfs:range ex:Religion .
                      
                      
-###Examples of ethinics
+###Instances of ethinicities
 ex:Mandinkas a ex:EthnicGroup .
 ex:Wollofs a ex:EthnicGroup .
 ex:Fulas a ex:EthnicGroup .
@@ -49,13 +50,15 @@ ex:Jolas a ex:EthnicGroup .
 ex:Akus  a ex:EthnicGroup.
 ex:Sereres a ex:EthnicGroup .
 ex:Manjagoes a ex:EthnicGroup .
-#examples of Religions
 
+
+
+#Instances  of Religions
 ex:Christianity a ex:Religion .
 ex:Islam a ex:Religion .
+ex:TraditionalReligion a ex:Religion .
 
-#examples of foods
-
+#Instances of foods
 ex:Domada a ex:Food .
 ex:Yassa a ex:Food .
 ex:CestBon a ex:Food.
@@ -67,11 +70,11 @@ ex:Afra a ex:Food .
 ex:Chakery a ex:Food .
 ex:Futi a ex:Food .
 
-#examples of places
+#Instances of places
 ex:Banjul a ex:Region .
 ex:Foni a ex:Region .
 
-#examples of relatinoships
+#Link of relationship between ethinicities and food.
 ex:Mandinkas ex:hasFood ex:Domada .
 ex:Wollofs ex:hasFood ex:Benechin .
 ex:Fulas ex:hasFood ex:Futi.
@@ -83,11 +86,15 @@ ex:Yassa ex:isMostlyEatenBy ex:Mandinkas,
                     ex:Manjagoes.
                     
                     
-#examples of ingredient class
+#Instances of ingredient class
 
 ex:Ingredient a owl:Class .
 ex:Pork a ex:Ingredient .
 ex:Beef a ex:Ingredient.
 ex:Vegetables a ex:Ingredient.
 ex:Chicken a ex:Ingredient .
+
+#Restricitions
+
+ex:islam ex:forbidsIngredient ex:Pork .
 
