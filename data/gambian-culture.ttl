@@ -98,3 +98,13 @@ ex:Chicken a ex:Ingredient .
 
 ex:islam ex:forbidsIngredient ex:Pork .
 
+#Linking Ethinic Groups to Religion
+
+ex:Jolas ex:practicsReligion ex:Christianity,
+                             ex:Islam .
+                             
+ex:Fulas ex:practicesReligion ex:Islam .
+ex:Wolofs ex:practicesReligion ex:Islam.
+ex:Mandinkas ex:practicesReligion ex:Islam .
+
+
