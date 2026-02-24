@@ -107,4 +107,15 @@ ex:Fulas ex:practicesReligion ex:Islam .
 ex:Wolofs ex:practicesReligion ex:Islam.
 ex:Mandinkas ex:practicesReligion ex:Islam .
 
+#Addition of advanced restriction 
 
+ex:PorkDish a owl:Class;
+              owl:equivalentClass [
+            a owl:Class;
+              owl:intersectionOf(
+                   ex:Food
+                   [ a owl:Restrcition;
+                    owl:onProperty ex:hasIngredient;
+                    owl:hasValue ex:Pork ]
+}
+] . 
