@@ -22,7 +22,7 @@ ex:belongsTo a owl:ObjectProperty .
 ex:isMostlyEatenBy a owl:ObjectProperty .
 ex:hasIngredient a owl:ObjectProperty.
 ex:forbidsIngredient a owl:ObjectProperty .
-ex:practiceReligion a owl:ObjectProperty.
+ex:practicesReligion a owl:ObjectProperty.
 
 ##property semantics
 
@@ -94,28 +94,28 @@ ex:Beef a ex:Ingredient.
 ex:Vegetables a ex:Ingredient.
 ex:Chicken a ex:Ingredient .
 
-#Restricitions
+#Restritions
 
-ex:islam ex:forbidsIngredient ex:Pork .
+ex:Islam ex:forbidsIngredient ex:Pork .
 
 #Linking Ethinic Groups to Religion
 
-ex:Jolas ex:practicsReligion ex:Christianity,
+ex:Jolas ex:practicesReligion ex:Christianity,
                              ex:Islam .
                              
 ex:Fulas ex:practicesReligion ex:Islam .
 ex:Wolofs ex:practicesReligion ex:Islam.
 ex:Mandinkas ex:practicesReligion ex:Islam .
 
-#Addition of advanced restriction 
+# Addition of advanced restriction
 
 ex:PorkDish a owl:Class;
               owl:equivalentClass [
             a owl:Class;
-              owl:intersectionOf(
+              owl:intersectionOf (
                    ex:Food
-                   [ a owl:Restrcition;
-                    owl:onProperty ex:hasIngredient;
+                   [ a owl:Restriction ;
+                    owl:onProperty ex:hasIngredient ;
                     owl:hasValue ex:Pork ]
-}
-] . 
+)
+] .
