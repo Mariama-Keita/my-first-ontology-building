@@ -4,9 +4,13 @@
 @prefix ex: <http://example.org/gambia#> .
 
 ### Classes
-ex:EthnicGroup a owl:Class .
+ex:EthnicGroup a owl:Class ;
+                 rdfs:label "Ethnic group"@en ;
+                 rdfs:comment "A group of individuals who speak common language, ancestry culture and traditions within the Gambia."@en.
+ex:Religion a owl:Class ;
+              rdfs:label "Religion"@en ;
+              rdfs:comment "Religion is a system of beliefs, practices and moral principles through which people worship and relate to higher spiritual power."@en .
 ex:Festival a owl:Class .
-ex:Religion a owl:Class .
 ex:Food a owl:Class .
 ex:Region a owl:Class .
 ex:Tradition a owl:Class .
