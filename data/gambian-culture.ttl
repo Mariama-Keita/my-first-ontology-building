@@ -11,6 +11,7 @@ ex:Food a owl:Class .
 ex:Region a owl:Class .
 ex:Tradition a owl:Class .
 ex:Music a owl:Class .
+ex:Ingredient a owl:Class .
 
 ### Object Properties
 ex:hasFood a owl:ObjectProperty .
@@ -22,7 +23,7 @@ ex:belongsTo a owl:ObjectProperty .
 ex:isMostlyEatenBy a owl:ObjectProperty .
 ex:hasIngredient a owl:ObjectProperty.
 ex:forbidsIngredient a owl:ObjectProperty .
-ex:practicesReligion a owl:ObjectProperty.
+ex:practicesReligion a owl:ObjectProperty .
 
 ##property semantics
 
@@ -88,10 +89,9 @@ ex:Yassa ex:isMostlyEatenBy ex:Mandinkas,
                     
 #Instances of ingredient class
 
-ex:Ingredient a owl:Class .
 ex:Pork a ex:Ingredient .
-ex:Beef a ex:Ingredient.
-ex:Vegetables a ex:Ingredient.
+ex:Beef a ex:Ingredient .
+ex:Vegetables a ex:Ingredient .
 ex:Chicken a ex:Ingredient .
 
 #Restritions
@@ -104,7 +104,7 @@ ex:Jolas ex:practicesReligion ex:Christianity,
                              ex:Islam .
                              
 ex:Fulas ex:practicesReligion ex:Islam .
-ex:Wolofs ex:practicesReligion ex:Islam.
+ex:Wolofs ex:practicesReligion ex:Islam .
 ex:Mandinkas ex:practicesReligion ex:Islam .
 
 # Addition of advanced restriction
