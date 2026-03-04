@@ -15,7 +15,10 @@ ex:Food a owl:Class ;
           rdfs:label"Food"@en ;
           rdfs:comment "Food is a substance consumed by humans to provide nutritional support and energy. In cultureal contexts , food preparation and  composition may varie according to traditions , culture , religion practices"@en .
         
-ex:Region a owl:Class .
+ex:Region a owl:Class ;
+            rdfs:label "Region"@en ;
+            rdfs:comment "Region is a defined  geographical or administrative area within a country used to represent spatial devisions such as provinces districts or local terrotories."@en . 
+ 
 ex:Tradition a owl:Class .
 ex:Music a owl:Class .
 ex:Ingredient a owl:Class .
