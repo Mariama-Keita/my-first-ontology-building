@@ -19,10 +19,18 @@ ex:Region a owl:Class ;
             rdfs:label "Region"@en ;
             rdfs:comment "Region is a defined  geographical or administrative area within a country used to represent spatial devisions such as provinces districts or local terrotories."@en . 
  
-ex:Tradition a owl:Class .
-ex:Music a owl:Class .
-ex:Ingredient a owl:Class .
-ex:Festival a owl:Class .
+ex:Tradition a owl:Class ;
+               rdfs:label "Tradition"@en ;
+               rdfs:comment "Tradition is a long-standing belief, custom , behavior that is passed down from one generation to another within groups, society , family etc"@en .
+ex:Music a owl:Class ;
+           rdfs:label "Music"@en ;
+           rdfs:comment"Music is defined as the art of organising sound, vocal or innstrumental, in time to create a delibrate often aesthetic experience"
+ex:Ingredient a owl:Class ;
+                rdfs:label "Ingredient"@en ;
+                rdfs:comment"An ingredient is a part of a mixture.It can also be deifned as any substance that are combined to make something particular" .
+ex:Festival a owl:Class ;
+              rdfs:label "Festival"@en ;
+              rdfs:comment "A festival is an occasional , organised celebration that is often community based on themes like culture , religion , arts and tradition. They are mostly organised for bonding and socialistaion".
 
 ### Object Properties
 ex:hasFood a owl:ObjectProperty .
