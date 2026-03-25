@@ -6,14 +6,14 @@
 ### Classes
 ex:EthnicGroup a owl:Class ;
                  rdfs:label "Ethnic group"@en ;
-                 rdfs:comment "A group of individuals who speak common language, ancestry culture and traditions within the Gambia."@en.
+                 rdfs:comment "A group of individuals who speak common language , ancestry culture and traditions within the Gambia."@en .
 ex:Religion a owl:Class ;
               rdfs:label "Religion"@en ;
               rdfs:comment "Religion is a system of beliefs, practices and moral principles through which people worship and relate to higher spiritual power."@en .
               
 ex:Food a owl:Class ;
-          rdfs:label"Food"@en ;
-          rdfs:comment "Food is a substance consumed by humans to provide nutritional support and energy. In cultureal contexts , food preparation and  composition may varie according to traditions , culture , religion practices"@en .
+          rdfs:label "Food"@en ;
+          rdfs:comment "Food is a substance consumed by humans to provide nutritional support and energy. In cultural contexts , food preparation and  composition may vary according to traditions , culture , religion practices"@en .
         
 ex:Region a owl:Class ;
             rdfs:label "Region"@en ;
@@ -24,7 +24,7 @@ ex:Tradition a owl:Class ;
                rdfs:comment "Tradition is a long-standing belief, custom , behavior that is passed down from one generation to another within groups, society , family etc"@en .
 ex:Music a owl:Class ;
            rdfs:label "Music"@en ;
-           rdfs:comment "Music is defined as the art of organising sound, vocal or innstrumental, in time to create a delibrate often aesthetic experience" .
+           rdfs:comment "Music is defined as the art of organising sound, vocal or innstrumental, in time to create a delibrate often aesthetic experience"@en .
 ex:Ingredient a owl:Class ;
                 rdfs:label "Ingredient"@en ;
                 rdfs:comment "An ingredient is a substance or mixture used in preparation of a food item or dish such as meat, vegetables , grain spices or other edible materials."@en .
@@ -46,19 +46,19 @@ ex:practicesReligion a owl:ObjectProperty .
 
 ##property semantics
 
-ex:hasFood rdfs:domain ex:EthnicGroup;
+ex:hasFood rdfs:domain ex:EthnicGroup ;
            rdfs:range ex:Food .
            
-ex:locatedIn rdfs:domain ex:EthnicGroup;
+ex:locatedIn rdfs:domain ex:EthnicGroup ;
             rdfs:range ex:Region .
             
-ex:isMostlyEatenBy rdfs:domain ex:Food;
+ex:isMostlyEatenBy rdfs:domain ex:Food ;
                    rdfs:range ex:EthnicGroup .
-ex:hasIngredient rdfs:domain ex:Food;
-                 rdfs:range ex:Ingredient.
-ex:forbidsIngredient rdfs:domain ex:Religion;
-                     rdfs:range ex:Ingredient.
-ex:practicesReligion rdfs:domain ex:EthnicGroup;
+ex:hasIngredient rdfs:domain ex:Food ;
+                 rdfs:range ex:Ingredient .
+ex:forbidsIngredient rdfs:domain ex:Religion ;
+                     rdfs:range ex:Ingredient .
+ex:practicesReligion rdfs:domain ex:EthnicGroup ;
                      rdfs:range ex:Religion .
                      
                      
@@ -67,7 +67,7 @@ ex:Mandinkas a ex:EthnicGroup .
 ex:Wollofs a ex:EthnicGroup .
 ex:Fulas a ex:EthnicGroup .
 ex:Jolas a ex:EthnicGroup .
-ex:Akus  a ex:EthnicGroup.
+ex:Akus  a ex:EthnicGroup .
 ex:Sereres a ex:EthnicGroup .
 ex:Manjagoes a ex:EthnicGroup .
 
@@ -81,7 +81,7 @@ ex:TraditionalReligion a ex:Religion .
 #Instances of foods
 ex:Domada a ex:Food .
 ex:Yassa a ex:Food .
-ex:CestBon a ex:Food.
+ex:CestBon a ex:Food .
 ex:SuperKanja a ex:Food .
 ex:Stew a ex:Food .
 ex:Benechin a ex:Food .
@@ -94,16 +94,16 @@ ex:Futi a ex:Food .
 ex:Banjul a ex:Region .
 ex:Foni a ex:Region .
 
-#Link of relationship between ethinicities and food.
+#Link of relationship between ethinicities and food .
 ex:Mandinkas ex:hasFood ex:Domada .
-ex:Wollofs ex:hasFood ex:Benechin .
-ex:Fulas ex:hasFood ex:Futi.
-ex:Yassa ex:isMostlyEatenBy ex:Mandinkas,
-                    ex:Sereres,
-                    ex:Fulas,
-                    ex:Jolas,
-                    ex:Akus,
-                    ex:Manjagoes.
+ex:Wolofs ex:hasFood ex:Benechin .
+ex:Fulas ex:hasFood ex:Futi .
+ex:Yassa ex:isMostlyEatenBy ex:Mandinkas ,
+                    ex:Sereres ,
+                    ex:Fulas ,
+                    ex:Jolas ,
+                    ex:Akus ,
+                    ex:Manjagoes .
                     
                     
 #Instances of ingredient class
@@ -119,7 +119,7 @@ ex:Islam ex:forbidsIngredient ex:Pork .
 
 #Linking Ethinic Groups to Religion
 
-ex:Jolas ex:practicesReligion ex:Christianity,
+ex:Jolas ex:practicesReligion ex:Christianity ,
                              ex:Islam .
                              
 ex:Fulas ex:practicesReligion ex:Islam .
@@ -128,13 +128,14 @@ ex:Mandinkas ex:practicesReligion ex:Islam .
 
 # Addition of advanced restriction
 
-ex:PorkDish a owl:Class;
+ex:PorkDish a owl:Class ;
               owl:equivalentClass [
-            a owl:Class;
+            a owl:Class ;
               owl:intersectionOf (
                    ex:Food
                    [ a owl:Restriction ;
                     owl:onProperty ex:hasIngredient ;
-                    owl:hasValue ex:Pork ]
+                    owl:hasValue ex:Pork
+                    ]
 )
 ] .
