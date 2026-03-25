@@ -5,32 +5,36 @@
 
 ### Classes
 ex:EthnicGroup a owl:Class ;
-                 rdfs:label "Ethnic group"@en ;
-                 rdfs:comment "A group of individuals who speak common language , ancestry culture and traditions within the Gambia."@en .
+    rdfs:label "Ethnic Group"@en ;
+    rdfs:comment "A group of people who share a common language, ancestry, culture, and traditions within The Gambia."@en .
+
 ex:Religion a owl:Class ;
-              rdfs:label "Religion"@en ;
-              rdfs:comment "Religion is a system of beliefs, practices and moral principles through which people worship and relate to higher spiritual power."@en .
-              
+    rdfs:label "Religion"@en ;
+    rdfs:comment "A system of beliefs, practices, and moral principles through which individuals worship and relate to a higher spiritual power."@en .
+
 ex:Food a owl:Class ;
-          rdfs:label "Food"@en ;
-          rdfs:comment "Food is a substance consumed by humans to provide nutritional support and energy. In cultural contexts , food preparation and  composition may vary according to traditions , culture , religion practices"@en .
-        
+    rdfs:label "Food"@en ;
+    rdfs:comment "A substance consumed by humans to provide nutritional support and energy. In cultural contexts, food preparation and composition may vary according to traditions, culture, and religious practices."@en .
+
 ex:Region a owl:Class ;
-            rdfs:label "Region"@en ;
-            rdfs:comment "Region is a defined  geographical or administrative area within a country used to represent spatial devisions such as provinces districts or local terrotories."@en . 
- 
+    rdfs:label "Region"@en ;
+    rdfs:comment "A defined geographical or administrative area within a country, used to represent spatial divisions such as provinces, districts, or local territories."@en .
+
 ex:Tradition a owl:Class ;
-               rdfs:label "Tradition"@en ;
-               rdfs:comment "Tradition is a long-standing belief, custom , behavior that is passed down from one generation to another within groups, society , family etc"@en .
+    rdfs:label "Tradition"@en ;
+    rdfs:comment "A long-standing custom, belief, or practice that is transmitted from one generation to another within a family, community, or cultural group."@en .
+
 ex:Music a owl:Class ;
-           rdfs:label "Music"@en ;
-           rdfs:comment "Music is defined as the art of organising sound, vocal or innstrumental, in time to create a delibrate often aesthetic experience"@en .
+    rdfs:label "Music"@en ;
+    rdfs:comment "The art of organizing vocal, instrumental, or other sounds in time to create a deliberate and often aesthetic form of expression."@en .
+
 ex:Ingredient a owl:Class ;
-                rdfs:label "Ingredient"@en ;
-                rdfs:comment "An ingredient is a substance or mixture used in preparation of a food item or dish such as meat, vegetables , grain spices or other edible materials."@en .
+    rdfs:label "Ingredient"@en ;
+    rdfs:comment "A substance or component used in the preparation of a food item or dish, such as meat, vegetables, grains, spices, or other edible materials."@en .
+
 ex:Festival a owl:Class ;
-              rdfs:label "Festival"@en ;
-              rdfs:comment "A festival is an occasional, organised celebration that is often community based on themes like culture , religion , arts and tradition. It involves collective particpation and social interaction."@en .
+    rdfs:label "Festival"@en ;
+    rdfs:comment "An organised and often recurring community celebration associated with cultural, religious, artistic, or traditional themes, typically involving collective participation and social interaction."@en .
 
 ### Object Properties
 ex:hasFood a owl:ObjectProperty .
@@ -40,45 +44,44 @@ ex:locatedIn a owl:ObjectProperty .
 ex:knownBy a owl:ObjectProperty .
 ex:belongsTo a owl:ObjectProperty .
 ex:isMostlyEatenBy a owl:ObjectProperty .
-ex:hasIngredient a owl:ObjectProperty.
+ex:hasIngredient a owl:ObjectProperty .
 ex:forbidsIngredient a owl:ObjectProperty .
 ex:practicesReligion a owl:ObjectProperty .
 
-##property semantics
-
+### Property Semantics
 ex:hasFood rdfs:domain ex:EthnicGroup ;
-           rdfs:range ex:Food .
-           
+    rdfs:range ex:Food .
+
 ex:locatedIn rdfs:domain ex:EthnicGroup ;
-            rdfs:range ex:Region .
-            
+    rdfs:range ex:Region .
+
 ex:isMostlyEatenBy rdfs:domain ex:Food ;
-                   rdfs:range ex:EthnicGroup .
+    rdfs:range ex:EthnicGroup .
+
 ex:hasIngredient rdfs:domain ex:Food ;
-                 rdfs:range ex:Ingredient .
+    rdfs:range ex:Ingredient .
+
 ex:forbidsIngredient rdfs:domain ex:Religion ;
-                     rdfs:range ex:Ingredient .
+    rdfs:range ex:Ingredient .
+
 ex:practicesReligion rdfs:domain ex:EthnicGroup ;
-                     rdfs:range ex:Religion .
-                     
-                     
-###Instances of ethinicities
+    rdfs:range ex:Religion .
+
+### Instances of Ethnic Groups
 ex:Mandinkas a ex:EthnicGroup .
 ex:Wollofs a ex:EthnicGroup .
 ex:Fulas a ex:EthnicGroup .
 ex:Jolas a ex:EthnicGroup .
-ex:Akus  a ex:EthnicGroup .
+ex:Akus a ex:EthnicGroup .
 ex:Sereres a ex:EthnicGroup .
 ex:Manjagoes a ex:EthnicGroup .
 
-
-
-#Instances  of Religions
+### Instances of Religions
 ex:Christianity a ex:Religion .
 ex:Islam a ex:Religion .
 ex:TraditionalReligion a ex:Religion .
 
-#Instances of foods
+### Instances of Foods
 ex:Domada a ex:Food .
 ex:Yassa a ex:Food .
 ex:CestBon a ex:Food .
@@ -90,52 +93,48 @@ ex:Afra a ex:Food .
 ex:Chakery a ex:Food .
 ex:Futi a ex:Food .
 
-#Instances of places
+### Instances of Regions
 ex:Banjul a ex:Region .
 ex:Foni a ex:Region .
 
-#Link of relationship between ethinicities and food .
+### Relationships Between Ethnic Groups and Foods
 ex:Mandinkas ex:hasFood ex:Domada .
-ex:Wolofs ex:hasFood ex:Benechin .
+ex:Wollofs ex:hasFood ex:Benechin .
 ex:Fulas ex:hasFood ex:Futi .
-ex:Yassa ex:isMostlyEatenBy ex:Mandinkas ,
-                    ex:Sereres ,
-                    ex:Fulas ,
-                    ex:Jolas ,
-                    ex:Akus ,
-                    ex:Manjagoes .
-                    
-                    
-#Instances of ingredient class
 
+ex:Yassa ex:isMostlyEatenBy ex:Mandinkas,
+    ex:Sereres,
+    ex:Fulas,
+    ex:Jolas,
+    ex:Akus,
+    ex:Manjagoes .
+
+### Instances of Ingredients
 ex:Pork a ex:Ingredient .
 ex:Beef a ex:Ingredient .
 ex:Vegetables a ex:Ingredient .
 ex:Chicken a ex:Ingredient .
 
-#Restritions
-
+### Religious Food Restriction
 ex:Islam ex:forbidsIngredient ex:Pork .
 
-#Linking Ethinic Groups to Religion
+### Linking Ethnic Groups to Religions
+ex:Jolas ex:practicesReligion ex:Christianity,
+    ex:Islam .
 
-ex:Jolas ex:practicesReligion ex:Christianity ,
-                             ex:Islam .
-                             
 ex:Fulas ex:practicesReligion ex:Islam .
-ex:Wolofs ex:practicesReligion ex:Islam .
+ex:Wollofs ex:practicesReligion ex:Islam .
 ex:Mandinkas ex:practicesReligion ex:Islam .
 
-# Addition of advanced restriction
-
+### Advanced OWL Restriction
 ex:PorkDish a owl:Class ;
-              owl:equivalentClass [
-            a owl:Class ;
-              owl:intersectionOf (
-                   ex:Food
-                   [ a owl:Restriction ;
-                    owl:onProperty ex:hasIngredient ;
-                    owl:hasValue ex:Pork
-                    ]
-)
-] .
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (
+            ex:Food
+            [ a owl:Restriction ;
+              owl:onProperty ex:hasIngredient ;
+              owl:hasValue ex:Pork
+            ]
+        )
+    ] .
