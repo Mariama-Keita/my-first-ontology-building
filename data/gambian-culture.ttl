@@ -37,7 +37,7 @@ ex:Festival a owl:Class ;
     rdfs:comment "An organised and often recurring community celebration associated with cultural, religious, artistic, or traditional themes, typically involving collective participation and social interaction."@en .
 
 ### Object Properties
-ex:hasFood a owl:ObjectProperty .
+
 ex:occupantsOf a owl:ObjectProperty .
 ex:practicedBy a owl:ObjectProperty .
 ex:locatedIn a owl:ObjectProperty .
@@ -49,8 +49,11 @@ ex:forbidsIngredient a owl:ObjectProperty .
 ex:practicesReligion a owl:ObjectProperty .
 
 ### Property Semantics
-ex:hasFood rdfs:domain ex:EthnicGroup ;
-    rdfs:range ex:Food .
+ex:hasFood a owl:ObjectProperty;
+           rdfs:label "has food"@en ;
+           rdfs:comment "Relates an ethinic group to a food that is commonly associated with or tradionally consumed by that group."@en ;
+           rdfs:domain ex:EthnicGroup ;
+           rdfs:range ex:Food .
 
 ex:locatedIn rdfs:domain ex:EthnicGroup ;
     rdfs:range ex:Region .
