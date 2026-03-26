@@ -43,7 +43,6 @@ ex:practicedBy a owl:ObjectProperty .
 ex:locatedIn a owl:ObjectProperty .
 ex:knownBy a owl:ObjectProperty .
 ex:belongsTo a owl:ObjectProperty .
-ex:isMostlyEatenBy a owl:ObjectProperty .
 ex:hasIngredient a owl:ObjectProperty .
 ex:forbidsIngredient a owl:ObjectProperty .
 ex:practicesReligion a owl:ObjectProperty .
@@ -54,7 +53,13 @@ ex:hasFood a owl:ObjectProperty;
            rdfs:comment "Relates an ethinic group to a food that is commonly associated with or tradionally consumed by that group."@en ;
            rdfs:domain ex:EthnicGroup ;
            rdfs:range ex:Food .
-
+           
+ex:isMostlyEatenBy a owl:ObjectProperty ;
+                   rdfs:label "is mostly eaten by"@en ;
+                   rdfs:comment "Relates a food to an ethnic group that commonly or traditionally consumes it."@en ;
+                   rdfs:domain ex:Food ;
+                   rdfs:range ex:EthincGroup ;
+                   owl:inverseOf ex:hasFood .
 ex:locatedIn rdfs:domain ex:EthnicGroup ;
     rdfs:range ex:Region .
 
