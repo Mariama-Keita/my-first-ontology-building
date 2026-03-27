@@ -36,18 +36,8 @@ ex:Festival a owl:Class ;
     rdfs:label "Festival"@en ;
     rdfs:comment "An organised and often recurring community celebration associated with cultural, religious, artistic, or traditional themes, typically involving collective participation and social interaction."@en .
 
-### Object Properties
+### Object Properties and property semantics
 
-ex:occupantsOf a owl:ObjectProperty .
-ex:practicedBy a owl:ObjectProperty .
-ex:locatedIn a owl:ObjectProperty .
-ex:knownBy a owl:ObjectProperty .
-ex:belongsTo a owl:ObjectProperty .
-ex:hasIngredient a owl:ObjectProperty .
-ex:forbidsIngredient a owl:ObjectProperty .
-ex:practicesReligion a owl:ObjectProperty .
-
-### Property Semantics
 ex:hasFood a owl:ObjectProperty;
            rdfs:label "has food"@en ;
            rdfs:comment "Relates an ethinic group to a food that is commonly associated with or tradionally consumed by that group."@en ;
@@ -60,20 +50,36 @@ ex:isMostlyEatenBy a owl:ObjectProperty ;
                    rdfs:domain ex:Food ;
                    rdfs:range ex:EthincGroup ;
                    owl:inverseOf ex:hasFood .
-ex:locatedIn rdfs:domain ex:EthnicGroup ;
-    rdfs:range ex:Region .
+ex:locatedIn a owl:ObjectProperty ;
+             rdfs:domain ex:EthnicGroup ;
+             rdfs:label "located in"@en ;
+             rdfs:comment "whatever the definition is"@en ;
+             rdfs:domain ex:EthinicGroup ;
+             rdfs:range ex:Region .
 
-ex:isMostlyEatenBy rdfs:domain ex:Food ;
-    rdfs:range ex:EthnicGroup .
+ex:isMostlyEatenBy a owl:ObjectProperty ;
+                   rdfs:label "is mostly eaten by"@en
+                   rdfs:comment "whatever the definiton is"@en
+                   rdfs:domain ex:Food ;
+                   rdfs:range ex:EthnicGroup .
 
-ex:hasIngredient rdfs:domain ex:Food ;
-    rdfs:range ex:Ingredient .
+ex:hasIngredient a owl:ObjectProperty ;
+                 rdfs:label "has ingredient"@en
+                 rdfs:comment "Relates a food item to an ingredeint used in its preparation."@en
+                 rdfs:domain ex:Food ;
+                 rdfs:range ex:Ingredient .
 
-ex:forbidsIngredient rdfs:domain ex:Religion ;
-    rdfs:range ex:Ingredient .
+ex:forbidsIngredient a owl:ObjectProperty ;
+                     rdfs:label "forbids ingredeint"@en ;
+                     rdfs:comment "what ever the defintion is "@en
+                     rdfs:domain ex:Religion ;
+                     rdfs:range ex:Ingredient .
 
-ex:practicesReligion rdfs:domain ex:EthnicGroup ;
-    rdfs:range ex:Religion .
+ex:practicesReligion a owl:ObjectProperty ;
+                     rdfs:label "practices religion"@en ;
+                     rdfs:comment "whatever the defintion is" ;
+                     rdfs:domain ex:EthnicGroup ;
+                     rdfs:range ex:Religion .
 
 ### Instances of Ethnic Groups
 ex:Mandinkas a ex:EthnicGroup .
