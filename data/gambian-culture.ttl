@@ -53,31 +53,31 @@ ex:isMostlyEatenBy a owl:ObjectProperty ;
 ex:locatedIn a owl:ObjectProperty ;
              rdfs:domain ex:EthnicGroup ;
              rdfs:label "located in"@en ;
-             rdfs:comment "whatever the definition is"@en ;
+             rdfs:comment "Relates an ethnic group to a region where it is commonly found, historically settled or culturally associated."@en ;
              rdfs:domain ex:EthinicGroup ;
              rdfs:range ex:Region .
 
 ex:isMostlyEatenBy a owl:ObjectProperty ;
                    rdfs:label "is mostly eaten by"@en
-                   rdfs:comment "whatever the definiton is"@en
+                   rdfs:comment "whatever the definiton is"@en ;
                    rdfs:domain ex:Food ;
                    rdfs:range ex:EthnicGroup .
 
 ex:hasIngredient a owl:ObjectProperty ;
                  rdfs:label "has ingredient"@en
-                 rdfs:comment "Relates a food item to an ingredeint used in its preparation."@en
+                 rdfs:comment "Relates a food item to an ingredeint used in its preparation."@en ;
                  rdfs:domain ex:Food ;
                  rdfs:range ex:Ingredient .
 
 ex:forbidsIngredient a owl:ObjectProperty ;
-                     rdfs:label "forbids ingredeint"@en ;
-                     rdfs:comment "what ever the defintion is "@en
+                     rdfs:label "forbids ingredient"@en ;
+                     rdfs:comment "It relates a religion to an ingredient that is prohibited or traditionlly avoided within its dietary practices."@en ;
                      rdfs:domain ex:Religion ;
                      rdfs:range ex:Ingredient .
 
 ex:practicesReligion a owl:ObjectProperty ;
                      rdfs:label "practices religion"@en ;
-                     rdfs:comment "whatever the defintion is" ;
+                     rdfs:comment "Relates ethnic group to a religion that is commonly practiced or historically associated with that group."@en ;
                      rdfs:domain ex:EthnicGroup ;
                      rdfs:range ex:Religion .
 
