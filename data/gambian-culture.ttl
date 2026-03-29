@@ -80,7 +80,19 @@ ex:practicesReligion a owl:ObjectProperty ;
                      rdfs:comment "Relates ethnic group to a religion that is commonly practiced or historically associated with that group."@en ;
                      rdfs:domain ex:EthnicGroup ;
                      rdfs:range ex:Religion .
-
+                     
+ex:hasTradition a owl:ObjectProperty ;
+                rdfs:label "has tradition"@en ;
+                rdfs:comment "Relates an ethnic group to a tradition that is commonly practiced, inherited or culturally assoicated with that group"@en ;
+                rdfs:domain ex:EthnicGroup ;
+                rdfs:range ex:Tradition .
+                
+ex:hasMusic a owl:ObjectProperty ;
+            rdfs:label "has music"@en ;
+            rdfs:comment "Relates en ethnic group to a form of music that is traditionally practiced, performed or culturally associated with that group"@en ;
+            rdfs:domain ex:EthinicGroup ;
+            rdfs:range ex:Music .
+            
 ### Instances of Ethnic Groups
 ex:Mandinkas a ex:EthnicGroup .
 ex:Wollofs a ex:EthnicGroup .
